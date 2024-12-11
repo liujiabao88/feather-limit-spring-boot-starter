@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * @author liujiabao
- * @description:
+ * 限流实现工厂
  * @since 2024-12-05
  */
 public class RateLimiterPluginFactory {

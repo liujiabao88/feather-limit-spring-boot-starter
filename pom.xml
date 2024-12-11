@@ -6,14 +6,27 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.2.0.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
-	<groupId>com.kiiler</groupId>
+	<groupId>io.github.liujiabao88</groupId>
 	<artifactId>feather-limit-spring-boot-starter</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
 	<name>feather-limit-spring-boot-starter</name>
+	<url>https://github.com/liujiabao88/feather-limit-spring-boot-starter</url>
 	<description>Lightweight current limiting</description>
+
+	<developers>
+		<developer>
+			<name>liujiabao88</name>
+			<email>15608658810@163.com</email>
+			<url>https://github.com/liujiabao88</url>
+		</developer>
+	</developers>
 	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 		<redisson-spring-boot-starter.version>3.22.0</redisson-spring-boot-starter.version>
 		<guava.version>33.3.1-jre</guava.version>
@@ -50,4 +63,72 @@
 			<version>${fastjson2.version}</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>3.2.4</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.sonatype.central</groupId>
+				<artifactId>central-publishing-maven-plugin</artifactId>
+				<version>0.5.0</version>
+				<extensions>true</extensions>
+				<configuration>
+					<publishingServerId>central</publishingServerId>
+					<checksums>required</checksums>
+					<deploymentName>Lightweight current limiting</deploymentName>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
+	</licenses>
+
+    <scm>
+        <connection>scm:git:git://github.com/liujiabao88/feather-limit-spring-boot-starter.git</connection>
+        <developerConnection>scm:git:ssh://github.com:liujiabao88/feather-limit-spring-boot-starter.git</developerConnection>
+        <url>https://github.com/liujiabao88/feather-limit-spring-boot-starter/tree/main</url>
+    </scm>
 </project>

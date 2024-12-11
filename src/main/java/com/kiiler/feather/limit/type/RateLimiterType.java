@@ -6,7 +6,7 @@ import org.apache.commons.lang.StringUtils;
 
 /**
  * @author liujiabao
- * @description:
+ * 限流类型
  * @since 2024-12-05
  */
 public enum RateLimiterType {

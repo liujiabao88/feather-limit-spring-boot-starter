@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author liujiabao
- * @description:
+ * 限流注解
  * @since 2024-12-02
  */
 @Documented
@@ -21,31 +21,31 @@ public @interface RateLimiter {
 
     /**
      * 限流资源名称(唯一)
-     * @return
+     * @return 限流资源名称
      */
     String sourceName();
 
     /**
      * 每单位时间允许请求
-     * @return
+     * @return 每单位时间允许请求
      */
     long rate() default 5;
 
     /**
      * 速率的单位时间
-     * @return
+     * @return 速率的单位时间
      */
     long rateInterval() default 1;
 
     /**
      * 时间单位
-     * @return
+     * @return 时间单位
      */
     TimeUnit unit() default TimeUnit.SECONDS;
 
     /**
      * 限流模式类型
-     * @return
+     * @return 限流模式类型
      */
     RateLimiterType type() default RateLimiterType.REDISSON;
 
@@ -53,7 +53,7 @@ public @interface RateLimiter {
      * 动态配置项的key（优先获取动态配置）
      * 配置模版
      * {"rate":3,"rateInterval":1,"unit":"SECONDS"}
-     * @return
+     * @return 动态配置项的key
      */
     String configKey() default "";
 }

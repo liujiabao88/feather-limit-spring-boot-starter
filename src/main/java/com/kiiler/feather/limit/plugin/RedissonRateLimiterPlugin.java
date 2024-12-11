@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author liujiabao
- * @description:
+ * redisson实现
  * @since 2024-12-05
  */
 public class RedissonRateLimiterPlugin implements RateLimiterPlugin {

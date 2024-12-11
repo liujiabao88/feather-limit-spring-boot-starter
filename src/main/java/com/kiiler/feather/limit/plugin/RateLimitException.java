@@ -2,7 +2,7 @@ package com.kiiler.feather.limit.plugin;
 
 /**
  * @author liujiabao
- * @description:
+ * 限流异常
  * @since 2024-12-05
  */
 public class RateLimitException extends RuntimeException {

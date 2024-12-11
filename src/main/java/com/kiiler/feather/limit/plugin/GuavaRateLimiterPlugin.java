@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author liujiabao
- * @description:
+ * guava限流实现
  * @since 2024-12-05
  */
 public class GuavaRateLimiterPlugin implements RateLimiterPlugin {

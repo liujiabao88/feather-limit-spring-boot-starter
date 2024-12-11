@@ -14,7 +14,7 @@ import org.springframework.core.env.Environment;
 
 /**
  * @author liujiabao
- * @description:
+ * 限流切面
  * @since 2024-12-02
  */
 @Aspect

@@ -2,7 +2,7 @@ package com.kiiler.feather.limit;
 
 /**
  * @author liujiabao
- * @description:
+ * 回调函数
  * @since 2024-12-05
  */
 @FunctionalInterface
@@ -10,7 +10,7 @@ public interface RateLimiterCallback {
 
     /**
      * 回调函数
-     * @param rateLimiter
+     * @param rateLimiter 限流器对象
      */
     void callback(RateLimiter rateLimiter);
 }

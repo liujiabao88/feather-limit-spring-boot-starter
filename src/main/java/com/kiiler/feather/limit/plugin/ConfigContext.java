@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author liujiabao
- * @description:
+ * 限流上下文
  * @since 2024-12-05
  */
 public class ConfigContext {
