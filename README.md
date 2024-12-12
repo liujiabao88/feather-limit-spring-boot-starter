@@ -38,13 +38,13 @@ rate.limiter.test.config={"rate":3,"rateInterval":1,"unit":"SECONDS"}
 ```
 ## 注解实用
 
-> [!NOTE]
-> sourceName - 限流资源名称(唯一)
-> rate - 单位时间允许请求
-> rateInterval - 速率的单位时间
-> unit - 时间单位
-> type - 限流模式类型
-> configKey - 动态配置项的key
+> [!NOTE]  
+> **sourceName** - 限流资源名称(唯一)  
+> **rate** - 单位时间允许请求  
+> **rateInterval** - 速率的单位时间  
+> **unit** - 时间单位  
+> **type** - 限流模式类型  
+> **configKey** - 动态配置项的key
 ### 单机模式
 ```
 @RateLimiter(sourceName = "rateLimiterTest", rate = 10, rateInterval = 1, unit = TimeUnit.SECONDS, type = RateLimiterType.GUAVA)  
