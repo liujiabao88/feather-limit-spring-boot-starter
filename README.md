@@ -36,7 +36,7 @@ spring.redis.password=xxxx
 rate.limiter.test.config={"rate":3,"rateInterval":1,"unit":"SECONDS"}
 
 ```
-## 注解实用
+## 注解使用
 
 > [!NOTE]  
 > **sourceName** - 限流资源名称(唯一)  
